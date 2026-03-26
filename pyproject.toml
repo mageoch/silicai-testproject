@@ -1,0 +1,11 @@
+[project]
+name = "silicai-testproject"
+version = "0.1.0"
+description = "SilicAI test project — TMP117 temperature sensor circuit"
+requires-python = ">=3.11"
+dependencies = [
+    "silicai",
+]
+
+[tool.uv.sources]
+silicai = { path = "../silicai" }

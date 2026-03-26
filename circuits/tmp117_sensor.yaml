@@ -1,0 +1,22 @@
+$schema: "https://github.com/mageoch/silicai/schema/circuit.schema.json"
+$schema_version: "0.1.0"
+
+circuit:
+  name: TMP117 temperature sensor
+  description: Minimal 3.3V I2C temperature sensing circuit, address 0x48
+
+  power_rails:
+    - net: VCC_3V3
+    - net: GND
+
+  buses:
+    - id: i2c_main
+      type: I2C
+      speed: { value: 400, unit: kHz }
+
+  instances:
+    - ref: U1
+      mpn: TMP117AIDRVR
+      bus: i2c_main
+      pin_config:
+        ADD0: GND       # pull to GND → address 0x48
