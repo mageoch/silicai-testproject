@@ -1,0 +1,20 @@
+$schema: "https://github.com/mageoch/silicai/schema/circuit.schema.json"
+$schema_version: "0.1.0"
+
+circuit:
+  name: TMP117 temperature sensor
+  description: TMP117 I2C temperature sensor at address 0x48
+
+  instances:
+    - ref: U1
+      mpn: TMP117AIDRVR
+      buses:
+        - id: i2c_main
+          interface: I2C
+          role: slave
+          address: "0x48"
+          pins:
+            scl: SCL
+            sda: SDA
+      rails:
+        vplus: +3V3

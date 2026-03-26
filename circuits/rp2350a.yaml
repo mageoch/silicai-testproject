@@ -1,0 +1,23 @@
+$schema: "https://github.com/mageoch/silicai/schema/circuit.schema.json"
+$schema_version: "0.1.0"
+
+circuit:
+  name: RP2350A microcontroller
+  description: RP2350A I2C master on GPIO4/GPIO5
+
+  instances:
+    - ref: U2
+      mpn: RP2350A
+      buses:
+        - id: i2c_main
+          interface: I2C
+          role: master
+          pins:
+            sda: GPIO4
+            scl: GPIO5
+      rails:
+        iovdd: +3V3
+        qspi_iovdd: +3V3
+        usb_otp_vdd: +3V3
+        adc_avdd: +3V3
+        vreg_vin: +3V3

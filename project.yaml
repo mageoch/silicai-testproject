@@ -1,0 +1,24 @@
+$schema: "https://github.com/mageoch/silicai/schema/project.schema.json"
+$schema_version: "0.1.0"
+
+project:
+  name: TMP117 Sensor Board
+  revision: "0.1"
+  company: ""
+  description: RP2350A reading a TMP117 temperature sensor over I2C at 400 kHz
+
+  shared:
+    power_rails:
+      - net: +3V3
+      - net: GND
+    buses:
+      - id: i2c_main
+        type: I2C
+        speed: { value: 400, unit: kHz }
+        pull_ups:
+          sda: { resistance: { value: 4.7, unit: kΩ }, net: +3V3 }
+          scl: { resistance: { value: 4.7, unit: kΩ }, net: +3V3 }
+
+  circuits:
+    - circuits/tmp117.yaml
+    - circuits/rp2350a.yaml
