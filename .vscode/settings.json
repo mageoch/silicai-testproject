@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "https://mageoch.github.io/silicai/schema/project.schema.json": ["project.yaml"],
+    "https://mageoch.github.io/silicai/schema/circuit.schema.json": ["circuits/**/*.yaml"]
+  }
+}
