@@ -9,9 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-silicai = { path = "../silicai" }
-
-[tool.silicai]
-component_libraries = [
-    { path = "../silicai-components" },
-]
+silicai = { git = "ssh://git@github.com/mageoch/silicai.git" }

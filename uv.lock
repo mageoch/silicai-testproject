@@ -227,25 +227,13 @@ wheels = [
 [[package]]
 name = "silicai"
 version = "0.1.0"
-source = { directory = "../silicai" }
+source = { git = "ssh://git@github.com/mageoch/silicai.git#469a65d9c6a598f21c3ddcb93926a4ab4f15a95d" }
 dependencies = [
     { name = "jsonschema" },
     { name = "kiutils" },
     { name = "pyyaml" },
     { name = "referencing" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "json-schema-for-humans", marker = "extra == 'docs'" },
-    { name = "jsonschema" },
-    { name = "kiutils" },
-    { name = "mkdocs", marker = "extra == 'docs'" },
-    { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.5,<9.6" },
-    { name = "pyyaml" },
-    { name = "referencing" },
-]
-provides-extras = ["docs"]
 
 [[package]]
 name = "silicai-testproject"
@@ -259,7 +247,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "kiutils", specifier = ">=1.4.8" },
-    { name = "silicai", directory = "../silicai" },
+    { name = "silicai", git = "ssh://git@github.com/mageoch/silicai.git" },
 ]
 
 [[package]]

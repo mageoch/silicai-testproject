@@ -3,3 +3,4 @@ __pycache__/
 kicad/
 .claude/
 .mcp.json
+output/
