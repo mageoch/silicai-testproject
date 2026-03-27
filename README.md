@@ -1,6 +1,8 @@
 # TMP117 Sensor Board
 
-A SilicAI test project: RP2350A microcontroller reading a TMP117 temperature sensor over I2C.
+A SilicAI example project: RP2350A microcontroller reading a TMP117 temperature sensor over I2C.
+
+See the [full walkthrough](https://mageoch.github.io/silicai/example-project/) in the SilicAI documentation.
 
 ## Overview
 
@@ -16,19 +18,18 @@ circuits/
   tmp117.yaml     TMP117 sensor circuit definition
   rp2350a.yaml    RP2350A microcontroller circuit definition
 project.yaml      SilicAI project definition
-kicad/            KiCad project files (not tracked)
+kicad/            Generated KiCad files (not tracked)
 ```
 
 ## Setup
 
-Requires [silicai](https://github.com/mageoch/silicai) and [silicai-components](https://github.com/mageoch/silicai-components) cloned as siblings:
+```bash
+git clone git@github.com:mageoch/silicai-testproject.git
+cd silicai-testproject
+pip install silicai
+```
 
-```
-mageoch/
-├── silicai/
-├── silicai-components/
-└── silicai-testproject/    ← this repo
-```
+Or with `uv`:
 
 ```bash
 uv sync
@@ -42,7 +43,7 @@ silicai-generate project.yaml --output kicad/
 
 ## MCP Integration
 
-Copy `.mcp.json` (gitignored) from the template below and adjust paths for your machine:
+Add a `.mcp.json` at the project root (gitignored):
 
 ```json
 {
